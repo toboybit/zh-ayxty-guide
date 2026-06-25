@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏体育 · 稳定入口与平台说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e1e2a;
+        }
+
+        /* 深色头图 ———— 主视觉区域 */
+        .hero {
+            background: linear-gradient(145deg, #0b0d17 0%, #1b1f2e 100%);
+            padding: 4rem 2rem 3.5rem;
+            text-align: center;
+            color: #e9ecf3;
+            border-bottom: 1px solid #2f3445;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #9bb7ff, #7f9cf5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            max-width: 640px;
+            margin: 1rem auto 0;
+            font-size: 1.1rem;
+            color: #bcc3db;
+            font-weight: 350;
+        }
+
+        .hero .sub-badge {
+            display: inline-block;
+            margin-top: 1.6rem;
+            padding: 0.35rem 1.2rem;
+            border-radius: 30px;
+            background: rgba(127, 156, 245, 0.18);
+            border: 1px solid rgba(127, 156, 245, 0.25);
+            font-size: 0.85rem;
+            color: #b4c5ff;
+            letter-spacing: 0.3px;
+        }
+
+        /* 浅色正文区 */
+        .content-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.8rem 2rem 3.5rem;
+        }
+
+        /* 信息卡片式布局 */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 10, 30, 0.02);
+            flex: 1 1 240px;
+            min-width: 220px;
+            padding: 2rem 1.6rem 1.8rem;
+            transition: all 0.2s ease;
+            border: 1px solid #eef1f7;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 550;
+            margin-bottom: 0.75rem;
+            color: #0f1421;
+        }
+
+        .card p {
+            color: #3d4357;
+            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .card .tag {
+            display: inline-block;
+            background: #eef2fe;
+            color: #3c5ac5;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-top: 0.3rem;
+        }
+
+        /* 自然链接段落 */
+        .link-block {
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 2.4rem 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eef1f7;
+            margin-bottom: 3rem;
+        }
+
+        .link-block h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #141a2b;
+            margin-bottom: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .link-block h2 small {
+            font-size: 0.9rem;
+            font-weight: 350;
+            color: #686f86;
+        }
+
+        .link-block p {
+            color: #2d3347;
+            max-width: 780px;
+            margin-bottom: 1.2rem;
+        }
+
+        .link-block a {
+            color: #4f6edb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .link-block a:hover {
+            border-bottom-color: #4f6edb;
+        }
+
+        .highlight-soft {
+            background: #f3f6ff;
+            padding: 1.2rem 1.6rem;
+            border-radius: 18px;
+            border-left: 4px solid #7f9cf5;
+            margin: 1.8rem 0 1rem;
+        }
+
+        .highlight-soft p {
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-mini {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.6rem;
+            margin: 2.2rem 0 0.6rem;
+        }
+
+        .faq-mini-item {
+            background: #f9faff;
+            padding: 1.4rem 1.2rem;
+            border-radius: 18px;
+            border: 1px solid #e8ebf3;
+        }
+
+        .faq-mini-item .question {
+            font-weight: 540;
+            color: #131b2f;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-mini-item .answer {
+            font-size: 0.9rem;
+            color: #3e455b;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dfe4ef;
+            margin: 2.2rem 0 1.6rem;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #6e768f;
+            font-size: 0.85rem;
+            padding: 1.2rem 0 0.5rem;
+            border-top: 1px solid #e4e8f2;
+            margin-top: 2.5rem;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero {
+                padding: 2.8rem 1.5rem 2.5rem;
+            }
+            .content-wrap {
+                padding: 2rem 1.2rem;
+            }
+            .card {
+                flex: 1 1 100%;
+            }
+            .faq-mini {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 460px) {
+            .hero p {
+                font-size: 0.98rem;
+            }
+            .link-block {
+                padding: 1.8rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色主视觉 -->
+    <div class="hero">
+        <h1><span>爱游戏体育</span> · 稳定的信息入口</h1>
+        <p>一个面向体育爱好者的内容聚合界面，强调清晰直达、界面友好与持续可访问。</p>
+        <div class="sub-badge">⚡ 日常更新 · 无干扰阅览</div>
+    </div>
+
+    <div class="content-wrap">
+
+        <!-- 卡片区域：用途 + 适合人群 -->
+        <div class="card-grid">
+            <div class="card">
+                <span class="card-icon">📋</span>
+                <h3>用途说明</h3>
+                <p>提供赛事动态、运动资讯与社区观点，适合快速获取感兴趣的内容脉络。不追求海量推送，更看重有效信息。</p>
+                <span class="tag">赛事 · 资讯</span>
+            </div>
+            <div class="card">
+                <span class="card-icon">🧑‍🤝‍🧑</span>
+                <h3>适合人群</h3>
+                <p>日常有浏览体育习惯的用户、希望减少信息过载的爱好者，以及注重访问流畅度的轻度读者。</p>
+                <span class="tag">体育爱好者 · 轻量浏览</span>
+            </div>
+            <div class="card">
+                <span class="card-icon">🧭</span>
+                <h3>场景参考</h3>
+                <p>通勤间隙、午休片段、晚间放松时打开页面，查阅近期动态或关注项目的更新。无强制推送，浏览节奏由你决定。</p>
+                <span class="tag">碎片时间 · 安静阅读</span>
+            </div>
+        </div>
+
+        <!-- 自然链接段落（含强调色链接） -->
+        <div class="link-block">
+            <h2>🔗 关于这个入口 <small>从稳定触达开始</small></h2>
+            <p>
+                如果你经常寻找一个干净、可以直接浏览体育内容的页面，那么 
+                <a href="https://zh-ayxty.com">爱游戏体育</a> 或许可以成为一个日常选项。
+                它不强调注册或复杂互动，而是把重心放在内容组织和访问稳定性上。
+            </p>
+            <p>
+                很多用户反馈，在需要快速了解赛事进展时，一个加载迅速、布局清晰的页面比什么都重要。
+                基于这种思路，页面设计避免了大图轮播和多余弹窗，尽量让信息自然呈现。
+            </p>
+            <div class="highlight-soft">
+                <p>📌 提示：如果你更喜欢简洁的浏览方式，可以直接将 <strong>爱游戏体育</strong> 添加为书签。每次打开时看到的都是当日更新内容，没有冗余的启动流程。</p>
+            </div>
+            <p>
+                同时，页面也会阶段性调整版块顺序，以适应用户的阅读习惯。无论是电脑端还是手机端，响应式适配都经过单独优化，保证在多数设备上获得一致体验。
+            </p>
+
+            <!-- FAQ摘要（卡片式） -->
+            <div class="faq-mini">
+                <div class="faq-mini-item">
+                    <div class="question">❓ 这个页面更新频率？</div>
+                    <div class="answer">通常每日更新内容摘要，重要赛事期间会增加快讯条目。不采用固定发布时间，以内容完成为准。</div>
+                </div>
+                <div class="faq-mini-item">
+                    <div class="question">❓ 是否需要登录？</div>
+                    <div class="answer">不需要。页面本身为公开访问，不设用户系统。未来也不会加入强制注册流程。</div>
+                </div>
+                <div class="faq-mini-item">
+                    <div class="question">❓ 移动端适配如何？</div>
+                    <div class="answer">完全适配手机与平板。卡片自动折行，字体大小随设备调整。建议使用系统自带浏览器即可。</div>
+                </div>
+            </div>
+
+            <hr>
+            <p style="font-size: 0.95rem; color: #3f465e;">
+                另外，如果你对当前内容形式有建议，或希望看到特定版块，可以随时通过页面底部联系方式反馈（目前暂设内测通道）。
+                我们相信，好的信息入口应该是安静的、可靠的，就像 
+                <a href="https://zh-ayxty.com">爱游戏体育</a> 一直尝试做的那样。
+            </p>
+        </div>
+
+        <!-- 结尾部分（非强制） -->
+        <div class="footer-note">
+            <span>爱游戏体育 · 简洁 · 稳定 · 内容优先</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
